@@ -41,34 +41,34 @@
                     <span class="text-xs font-bold text-[#65709d] bg-blue-50 px-3 py-1 rounded-full">كتابة إبداعية</span>
                     <h3 class="text-2xl font-bold text-[#0f3d2e] my-4">حين تباع الأرواح</h3>
                     <p class="text-gray-600 mb-4 line-clamp-2">بقلم الطالبة: جمانه فلاحه. برأيك ما هو ثمن جثتك ؟...</p>
-                    <a href="article1.html" class="text-[#65709d] font-bold hover:underline">اقرأ المزيد ←</a>
+                    <a href="حين تباع الارواح.html" class="text-[#65709d] font-bold hover:underline">اقرأ المزيد ←</a>
                 </div>
             </div>
         </div> 
-
-        <div id="hoby" class="tab-content">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <span class="text-xs font-bold text-[#65709d] bg-blue-50 px-3 py-1 rounded-full">مواهب</span>
-                    <h3 class="text-2xl font-bold text-[#0f3d2e] my-4">موهبة الرسم الرقمي</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-2">إبداع الطالبة في دمج الألوان والخيال...</p>
-                    <a href="#" class="text-[#65709d] font-bold hover:underline">اقرأ المزيد ←</a>
-                </div>
-            </div>
-        </div>
 
         <div id="stories" class="tab-content">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                     <div class="h-48 overflow-hidden">
                         <img src="WhatsApp Image 2026-02-13 at 1.45.06 PM.jpeg" 
-                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="مراجعة كتاب">
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-[#0f3d2e] mb-2">مراجعة كتاب: بقلم المبدعة/لمى عبدالطيف الموسى</h4>
                         <p class="text-sm text-gray-500 mb-4">يعرض د. عبدالله الغذامي كتابه بوصفه حكاية نقدية...</p>
-                        <a href="lama-book-review.html" class="text-[#65709d] font-bold text-sm inline-block hover:underline">استكمال القراءة ←</a>
+                        <a href="لمى.html" class="text-[#65709d] font-bold text-sm inline-block hover:underline">استكمال القراءة ←</a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hoby" class="tab-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <span class="text-xs font-bold text-[#65709d] bg-blue-50 px-3 py-1 rounded-full">مواهب</span>
+                    <h3 class="text-2xl font-bold text-[#0f3d2e] my-4">مواهب تتحدث</h3>
+                    <p class="text-gray-600 mb-4 line-clamp-2">نافذة لاستعراض مواهب طالباتنا المتميزات...</p>
+                    <a href="#" class="text-[#65709d] font-bold hover:underline">اقرأ المزيد ←</a>
                 </div>
             </div>
         </div>
@@ -91,13 +91,16 @@
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
                 tabcontent[i].style.display = "none";
             }
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("bg-[#65709d]", "text-white");
             }
-            document.getElementById(tabName).style.display = "block";
+            const activeTab = document.getElementById(tabName);
+            activeTab.style.display = "block";
+            activeTab.classList.add("active");
             evt.currentTarget.classList.add("bg-[#65709d]", "text-white");
         }
     </script>
