@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحصائيات البرامج الوطنية 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        .tab-btn.active { border-color: #65709d; background-color: #f3f4f6; color: #65709d; transform: scale(1.05); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 font-sans">
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-black text-gray-800">مركز الإحصائيات  2026</h1>
+            <p class="text-gray-500 mt-3">اختر المسابقة أو البرنامج لاستعراض البيانات</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <button onclick="openTab(event, 'kangaroo')" class="tab-btn active p-8 bg-white rounded-3xl shadow-sm border-2 border-transparent transition-all flex flex-col items-center">
+                <span class="text-4xl mb-3">🦘</span>
+                <span class="font-bold text-xl">مسابقة كانجارو</span>
+            </button>
+
+            <button onclick="openTab(event, 'ibdaa')" class="tab-btn p-8 bg-white rounded-3xl shadow-sm border-2 border-transparent transition-all flex flex-col items-center">
+                <span class="text-4xl mb-3">💡</span>
+                <span class="font-bold text-xl">أولمبياد إبداع</span>
+            </button>
+
+            <button onclick="openTab(event, 'nismo')" class="tab-btn p-8 bg-white rounded-3xl shadow-sm border-2 border-transparent transition-all flex flex-col items-center">
+                <span class="text-4xl mb-3">⚡</span>
+                <span class="font-bold text-xl">برنامج نسمو</span>
+            </button>
+        </div>
+
+        <div id="kangaroo" class="tab-content active">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-r-8 border-orange-400">
+                <h2 class="text-2xl font-bold mb-6 text-orange-600">إحصائيات مسابقة كانجارو للرياضيات</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-orange-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">إجمالي المسجلين</p>
+                        <p class="text-3xl font-black text-orange-700">0</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">المدارس المشاركة</p>
+                        <p class="text-3xl font-black text-orange-700">0</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">الميداليات الموزعة</p>
+                        <p class="text-3xl font-black text-orange-700">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ibdaa" class="tab-content">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-r-8 border-[#65709d]">
+                <h2 class="text-2xl font-bold mb-6 text-[#65709d]">إحصائيات أولمبياد إبداع العلمي</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-indigo-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">المشاريع البحثية</p>
+                        <p class="text-3xl font-black text-[#65709d]">0</p>
+                    </div>
+                    <div class="bg-indigo-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">المتأهلين للتصفيات</p>
+                        <p class="text-3xl font-black text-[#65709d]">0</p>
+                    </div>
+                    <div class="bg-indigo-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">المناطق الإدارية</p>
+                        <p class="text-3xl font-black text-[#65709d]">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nismo" class="tab-content">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-r-8 border-red-600">
+                <h2 class="text-2xl font-bold mb-6 text-red-600">إحصائيات برنامج نيسمو (NISMO)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">الطلاب الموهوبين</p>
+                        <p class="text-3xl font-black text-red-700">0</p>
+                    </div>
+                    <div class="bg-red-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">ساعات التدريب</p>
+                        <p class="text-3xl font-black text-red-700">0</p>
+                    </div>
+                    <div class="bg-red-50 p-6 rounded-2xl">
+                        <p class="text-gray-600">المراكز التدريبية</p>
+                        <p class="text-3xl font-black text-red-700">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="index.html" class="text-gray-400 hover:text-[#65709d] transition">العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
