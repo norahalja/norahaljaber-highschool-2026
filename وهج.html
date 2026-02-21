@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وهج نوره</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background-color: #ffffff; 
+        }
+        
+        /* الخطوط والألوان بناءً على الصور المرفقة */
+        .header-title { 
+            color: #0e4a40; /* الأخضر الداكن من الصورة */
+            font-weight: 900; 
+            font-size: 1.5rem;
+        }
+
+        .back-link {
+            color: #65709d;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* تنسيق كروت الصور (نفس انحناءات الصورة) */
+        .photo-frame {
+            border-radius: 1.8rem; 
+            overflow: hidden;
+            background-color: #000; /* خلفية سوداء مثل مشغل الفيديو في الصورة */
+            aspect-ratio: 16 / 9; /* نمط العرض في الصور */
+            transition: transform 0.3s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <nav class="flex justify-between items-center px-10 py-6 border-b border-gray-100">
+        <h1 class="header-title">وهج نوره</h1>
+        <a href="index.html" class="back-link">
+            العودة للرئيسية ←
+        </a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-8 py-16">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="photo-frame">
+                <img src="your-image-1.jpg" alt="">
+            </div>
+
+            <div class="photo-frame">
+                <img src="your-image-2.jpg" alt="">
+            </div>
+
+            <div class="photo-frame">
+                <img src="your-image-3.jpg" alt="">
+            </div>
+
+            <div class="photo-frame">
+                <img src="your-image-4.jpg" alt="">
+            </div>
+
+            <div class="photo-frame">
+                <img src="your-image-5.jpg" alt="">
+            </div>
+
+            <div class="photo-frame">
+                <img src="your-image-6.jpg" alt="">
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="py-10 text-center text-gray-200">
+        &copy; 2026
+    </footer>
+
+</body>
+</html>
